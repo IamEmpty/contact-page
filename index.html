@@ -1,72 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Contact-page by IamEmpty</title>
+<head>
+	<title>Контакты</title>
+	<meta charset="utf-8">
+</head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Contact-page</h1>
-        <p class="header">Страница с контактами и формой обратной связи</p>
+<body>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/IamEmpty/contact-page/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/IamEmpty/contact-page/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/IamEmpty/contact-page">View On GitHub</a></li>
-        </ul>
+	<div class="top-block">
+		<div class="breadcrumbs">
+			Главная страница
+			Контакты
+		</div>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/IamEmpty">IamEmpty</a></p>
+		<h1>Как с нами связаться</h1>
 
+		<div class="switcher">
+			Москва
+			Санкт-Петербург
+		</div>
+	</div>
 
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	<div class="contact-info-block">
+		<h3>Представительство</h3>
+		<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="streetAddress">Ул. Руставели, д. 3, корп. 7, под. 1 , </span>
+			<span itemprop="postalCode">127254, </span>
+			<span itemprop="addressLocality">Москва, </span>
+			<span itemprop="addressLocality">Россия</span>
+		</div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		Телефоны: 
+		<span itemprop="telephone">(495) 618-73-17,</span>
+		<span itemprop="telephone">(495) 619-41-78</span>
+		E-mail: 
+		<a href="mailto:info@ymm.ru" itemprop="email">info@ymm.ru</a>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		<time itemprop="openingHours" datetime="Mo-Su">
+			Часы работы: 10:00 - 18:00
+		</time>
+	 
+		<h3>Интернет-магазин</h3>
+		<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="streetAddress">Ул. Руставели, д. 3, корп. 7, под. 1 , </span>
+			<span itemprop="postalCode">127254, </span>
+			<span itemprop="addressLocality">Москва, </span>
+			<span itemprop="addressLocality">Россия</span>
+		</div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<a href="http://www.leaderfoto.ru">www.leaderfoto.ru</a>
+		Телефон:  
+		<span itemprop="telephone">(495) 604-45-02</span>
+		Факс: 
+		<span itemprop="faxNumber">(495) 604-45-03</span>
+		E-mail: 
+		<a href="mailto:info@leaderfoto.ru" itemprop="email">info@leaderfoto.ru</a>
+		Часы работы:
+		<time itemprop="openingHours" datetime="Mo-Su">
+			понедельник-пятница 10:00 - 19:00
+			суббота 11:00 - 18:00
+		</time>
+	</div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+	<div class="heading-background">
+		<h2>форма обратной связи</h2>
+	</div>
+	
+	<form>
+		<p>Если у Вас есть вопросы, предложения 
+		или жалобы, связанные с работой 
+		магазинов и сотрудников сети "Яркий”, 
+		Вы можете заполнить форму 
+		или обратиться к нам по электронной 
+		почте на адрес <a href="mailto:ym@ym.spb.ru">ym@ym.spb.ru</a>.</p>
+		 
+		<p>Все Ваши письма будут рассмотрены 
+		руководством компании в кратчайшие 
+		сроки.</p>
+		 
+		<p>Мы ценим Ваше мнение и работаем 
+		для того, чтобы Вам было удобно.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		<label>Имя и фамилия</label>
+		<input type="text">
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		<label>Контактное лицо</label>
+		<input type="text">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+		<label>Способ связи</label>
+		<input type="radio">
+		<input type="radio">
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+		<label>Электронная почта</label>
+		<input type="text">
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+		<label>Телефон</label>
+		<input type="text">
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+		Сообщение
+		<textarea></textarea>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
-  </body>
+		Введите то, что 
+		видите на картинке
+
+		<button class="send">
+			отправить
+		</button>
+	</form>
+</body>
 </html>
