@@ -1,0 +1,153 @@
+/*-- Variables --*/
+
+$white: #fff;
+$yellow: #f8e012;
+
+$dark-grayish-red: #adacac;
+$very-dark-grayish-red: #393838;
+$very-dark-gray-mostly-black: #252525;
+
+$dark-blue: #0c4da2;
+$strong-blue: #2570d2; //#175fbd
+$moderate-blue: #3778ce;
+$bright-blue: #3684e9; //#3d93fa
+$vivid-blue: #1674ef;
+$dark-blue: #1056b2;
+
+
+/*-- Mixins --*/
+
+@mixin linear-gradient($color1, $color2) {
+	background: -moz-linear-gradient(top, $color1, $color2);
+	background: -webkit-linear-gradient(top, $color1, $color2);
+	background: -o-linear-gradient(top, $color1, $color2);
+	background: linear-gradient(top, $color1, $color2);
+}
+
+
+base {
+	padding: 0 10px;
+	width: 960px;
+}
+
+body {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 30px;
+	color: $very-dark-grayish-red;
+	display: block;
+}
+
+h2 {
+	color: $white;
+	font-size: 20.76px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 73px 0 146px;
+}
+
+h3 {
+	font-size: 14px;
+	color: $very-dark-gray-mostly-black;
+	margin: 0;
+}
+
+a {
+	font-family: "ProxivaNova";
+	font-family: "ProxivaNova light";
+	color: $strong-blue;
+	text-decoration: none;
+	border-bottom: 1px solid $strong-blue;
+}
+
+
+/*-- Breadcrumbs --*/
+
+.breadcrumbs {
+	font-size: 12px;
+	color: $dark-grayish-red;
+}
+
+/*-- Button primary --*/
+
+.btn-primary {
+	color: $white;
+	text-transform: uppercase;
+	@include linear-gradient($bright-blue, $strong-blue);
+	border: none;
+	border-bottom: 2px solid $dark-blue;
+	font-size: 16px;
+	padding: 15px 21px 12px;
+	border-radius: 3px;
+}
+
+.btn-submit {
+	margin: 20px auto 19px;
+	display: block;
+	border-top: 4px solid $yellow;
+}
+
+/*-- Yellow frame --*/
+
+.yellow-frame {
+	border: 4px solid $yellow;
+}
+
+.contact-info-block {
+	width: 319px - 2 * 29px;
+	position: absolute;
+	top: 53px + 35px;
+	background: $white;
+	margin-left: 60px;
+	padding: 33px 29px;
+}
+
+.heading-background {
+	border-top: 1px solid #3684e9;
+	border-bottom: 1px solid $moderate-blue;
+	@include linear-gradient($vivid-blue, $dark-blue);
+}
+
+
+/*-- Yandex map --*/
+
+#YMap {
+    width: 100%;
+    height: 650px;
+}
+
+input {
+	widows: 337px;
+	height: 31px;
+	border-radius: 3px;
+}
+
+textarea {
+	width: 337px;
+	height: 157px;
+	border-radius: 3px;
+}
+
+.inner {
+	padding: 0 10px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.switch {
+	padding: 20px 29px 15px;
+	display: inline-block;
+}
+
+.top-block {
+	padding: 14px 0 0 0;
+}
+
+form {
+	background: $white;
+	position: relative;
+	top: -119px;
+}
