@@ -98,7 +98,7 @@ textarea {
 
 .switch {
   padding: 20px 29px 15px;
-  display: inline-block; }
+  display: block; }
 
 .top-block {
   padding: 14px 0 0 0; }
