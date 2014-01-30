@@ -5,7 +5,7 @@ $yellow: #f8e012;
 
 $dark-grayish-red: #adacac;
 $very-dark-grayish-red: #393838;
-$very-dark-gray-mostly-black: #252525;
+$very-dark-gray-mostly-black: #252525; //#2d2d2d
 
 $dark-blue: #0c4da2;
 $strong-blue: #2570d2; //#175fbd
@@ -24,6 +24,23 @@ $dark-blue: #1056b2;
 	background: linear-gradient(top, $color1, $color2);
 }
 
+@mixin link() {
+	color: $strong-blue;
+	text-decoration: none;
+	border-bottom: 1px solid $strong-blue;
+
+	&:hover {
+		border-bottom: 0;
+	}
+}
+
+
+/*-- Styles --*/
+
+@font-face {
+	font-family: "ProxivaNova";
+	src: url(fonts/proximanova.ttf);
+}
 
 base {
 	padding: 0 10px;
@@ -41,26 +58,18 @@ h1 {
 	display: block;
 }
 
-h2 {
-	color: $white;
-	font-size: 20.76px;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 73px 0 146px;
-}
-
 h3 {
 	font-size: 14px;
 	color: $very-dark-gray-mostly-black;
 	margin: 0;
 }
 
-a {
-	font-family: "ProxivaNova";
-	font-family: "ProxivaNova light";
-	color: $strong-blue;
-	text-decoration: none;
-	border-bottom: 1px solid $strong-blue;
+p {
+	a {
+		font-family: "ProxivaNova";
+		font-family: "ProxivaNova light";
+		@include link();
+	}
 }
 
 
@@ -69,7 +78,40 @@ a {
 .breadcrumbs {
 	font-size: 12px;
 	color: $dark-grayish-red;
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		list-style: none;
+
+		&:after {
+			content: ">";
+			display: inline-block;
+			padding: 0 4px 0 8px;
+			font-size: 9px;
+			line-height: 1;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		color: $dark-grayish-red;
+		text-decoration: none;
+
+		&:hover {
+			border-bottom: 1px solid $dark-grayish-red;
+		}
+	}
 }
+
 
 /*-- Button primary --*/
 
@@ -80,8 +122,13 @@ a {
 	border: none;
 	border-bottom: 2px solid $dark-blue;
 	font-size: 16px;
+	font-weight: bold;
 	padding: 15px 21px 12px;
 	border-radius: 3px;
+
+	&:hover {
+		@include linear-gradient($strong-blue, $bright-blue);
+	}
 }
 
 .btn-submit {
@@ -89,6 +136,7 @@ a {
 	display: block;
 	border-top: 4px solid $yellow;
 }
+
 
 /*-- Yellow frame --*/
 
@@ -103,12 +151,43 @@ a {
 	background: $white;
 	margin-left: 60px;
 	padding: 33px 29px;
+
+	a {
+		@include link();
+	}
 }
 
 .heading-background {
 	border-top: 1px solid #3684e9;
 	border-bottom: 1px solid $moderate-blue;
 	@include linear-gradient($vivid-blue, $dark-blue);
+
+	h2 {
+		color: $white;
+		font-size: 20.76px;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 54px 0 165px;
+		font-weight: normal;
+
+		&:before {
+			content: "—";
+			display: inline-block;
+			font-weight: normal;
+			padding: 0 13px 0 0;
+			line-height: 1;
+			//font-size: 14px;
+		}
+
+		&:after {
+			content: "—";
+			display: inline-block;
+			font-weight: normal;
+			padding: 0 0 0 13px;
+			line-height: 1;
+			//font-size: 14px;
+		}
+	}
 }
 
 
@@ -137,9 +216,11 @@ textarea {
 	margin: 0 auto;
 }
 
-.switch {
+.switcher {
 	padding: 20px 29px 15px;
 	display: block;
+	color: $very-dark-gray-mostly-black;
+	font-size: 16px;
 }
 
 .top-block {
@@ -150,4 +231,9 @@ form {
 	background: $white;
 	position: relative;
 	top: -119px;
+	padding: 47px - 14px 54px 0;
+
+	p {
+		width: 261px;
+	}
 }

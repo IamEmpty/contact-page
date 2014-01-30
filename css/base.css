@@ -1,5 +1,11 @@
+@charset "IBM437";
 /*-- Variables --*/
 /*-- Mixins --*/
+/*-- Styles --*/
+@font-face {
+  font-family: "ProxivaNova";
+  src: url(fonts/proximanova.ttf); }
+
 base {
   padding: 0 10px;
   width: 960px; }
@@ -13,29 +19,42 @@ h1 {
   color: #393838;
   display: block; }
 
-h2 {
-  color: white;
-  font-size: 20.76px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 73px 0 146px; }
-
 h3 {
   font-size: 14px;
   color: #252525;
   margin: 0; }
 
-a {
+p a {
   font-family: "ProxivaNova";
   font-family: "ProxivaNova light";
   color: #2570d2;
   text-decoration: none;
   border-bottom: 1px solid #2570d2; }
+  p a:hover {
+    border-bottom: 0; }
 
 /*-- Breadcrumbs --*/
 .breadcrumbs {
   font-size: 12px;
   color: #adacac; }
+  .breadcrumbs ul {
+    padding: 0; }
+  .breadcrumbs li {
+    display: inline-block;
+    list-style: none; }
+    .breadcrumbs li:after {
+      content: ">";
+      display: inline-block;
+      padding: 0 4px 0 8px;
+      font-size: 9px;
+      line-height: 1; }
+    .breadcrumbs li:last-child:after {
+      display: none; }
+  .breadcrumbs a {
+    color: #adacac;
+    text-decoration: none; }
+    .breadcrumbs a:hover {
+      border-bottom: 1px solid #adacac; }
 
 /*-- Button primary --*/
 .btn-primary {
@@ -48,8 +67,14 @@ a {
   border: none;
   border-bottom: 2px solid #1056b2;
   font-size: 16px;
+  font-weight: bold;
   padding: 15px 21px 12px;
   border-radius: 3px; }
+  .btn-primary:hover {
+    background: -moz-linear-gradient(top, #2570d2, #3684e9);
+    background: -webkit-linear-gradient(top, #2570d2, #3684e9);
+    background: -o-linear-gradient(top, #2570d2, #3684e9);
+    background: linear-gradient(top, #2570d2, #3684e9); }
 
 .btn-submit {
   margin: 20px auto 19px;
@@ -67,6 +92,12 @@ a {
   background: white;
   margin-left: 60px;
   padding: 33px 29px; }
+  .contact-info-block a {
+    color: #2570d2;
+    text-decoration: none;
+    border-bottom: 1px solid #2570d2; }
+    .contact-info-block a:hover {
+      border-bottom: 0; }
 
 .heading-background {
   border-top: 1px solid #3684e9;
@@ -75,6 +106,25 @@ a {
   background: -webkit-linear-gradient(top, #1674ef, #1056b2);
   background: -o-linear-gradient(top, #1674ef, #1056b2);
   background: linear-gradient(top, #1674ef, #1056b2); }
+  .heading-background h2 {
+    color: white;
+    font-size: 20.76px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 54px 0 165px;
+    font-weight: normal; }
+    .heading-background h2:before {
+      content: "—";
+      display: inline-block;
+      font-weight: normal;
+      padding: 0 13px 0 0;
+      line-height: 1; }
+    .heading-background h2:after {
+      content: "—";
+      display: inline-block;
+      font-weight: normal;
+      padding: 0 0 0 13px;
+      line-height: 1; }
 
 /*-- Yandex map --*/
 #YMap {
@@ -96,9 +146,11 @@ textarea {
   width: 960px;
   margin: 0 auto; }
 
-.switch {
+.switcher {
   padding: 20px 29px 15px;
-  display: block; }
+  display: block;
+  color: #252525;
+  font-size: 16px; }
 
 .top-block {
   padding: 14px 0 0 0; }
@@ -106,4 +158,7 @@ textarea {
 form {
   background: white;
   position: relative;
-  top: -119px; }
+  top: -119px;
+  padding: 33px 54px 0; }
+  form p {
+    width: 261px; }
